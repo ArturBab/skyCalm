@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SkycalmAnalyzerApplication {
 
 	public static void main(String[] args) {
+		System.out.println(">>> SkyCalm Analyzer is starting...");
 		SpringApplication.run(SkycalmAnalyzerApplication.class, args);
 	}
 
