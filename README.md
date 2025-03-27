@@ -38,7 +38,7 @@ skyCalm/ ├── skycalm-gateway // Exposes REST API to clients └── skyc
 ## Features (In Progress)
 
 - [x] RESTful entrypoint (`skycalm-gateway`)
-- [ ] gRPC microservice for analysis (`skycalm-analyzer`)
+- [x] gRPC microservice for analysis (`skycalm-analyzer`)
 - [ ] Protobuf-based contract definition
 - [ ] Integration with real external APIs
 - [ ] Docker + Docker Compose support
