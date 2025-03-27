@@ -1,4 +1,4 @@
-## **SkyCalm — Calm Your Flight, Calm Your Mind**
+# **SkyCalm — Calm Your Flight, Calm Your Mind**
 
 **SkyCalm** is a backend-only microservice architecture built in Java using Spring Boot and gRPC.  
 It is designed to help people with **aerophobia** (fear of flying) by analyzing flight paths, weather conditions, and turbulence risks to provide detailed, personalized flight comfort information.
@@ -55,3 +55,16 @@ cd skycalm-gateway
 .\mvnw.cmd spring-boot:run # For Windows
 ```
 ---
+
+## **Analyzer service will be connected via gRPC (coming soon)**
+
+* People who experience anxiety before or during flights
+
+* Travel agencies or airline platforms seeking pre-flight reassurance modules
+
+* Developers looking to understand gRPC + REST microservices with Spring Boot
+---
+### **Author**
+ArturBab  — Java Backend Developer
+> * Graduate of Bauman Moscow State Technical University
+> * Focused on backend engineering, clean architecture, and real-world systems
