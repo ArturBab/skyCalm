@@ -120,6 +120,7 @@
         </plugin>
 
 		</plugins>
+		<sourceDirectory>${project.build.directory}/generated-sources/protobuf/java</sourceDirectory>
 	</build>
 
 </project>
