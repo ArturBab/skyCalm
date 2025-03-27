@@ -66,5 +66,5 @@ cd skycalm-gateway
 ---
 ### **Author**
 ArturBab  — Java Backend Developer
-> * Graduate of Bauman Moscow State Technical University
-> * Focused on backend engineering, clean architecture, and real-world systems
+- Graduate of Bauman Moscow State Technical University
+ * Focused on backend engineering, clean architecture, and real-world systems
