@@ -1,30 +1,29 @@
 package com.skycalm.analyzer.service;
 
-import net.devh.boot.grpc.server.service.GrpcService;
-import com.skycalm.analyzer.grpc.FlightAnalyzerServiceGrpc;
 import com.skycalm.analyzer.grpc.FlightRequest;
 import com.skycalm.analyzer.grpc.FlightResponse;
+import com.skycalm.analyzer.grpc.FlightAnalyzerServiceGrpc.FlightAnalyzerServiceImplBase;
 
 import io.grpc.stub.StreamObserver;
 
-@GrpcService
-public class FlightAnalyzerServiceImpl extends FlightAnalyzerServiceGrpc.FlightAnalyzerServiceImplBase {
 
+public class FlightAnalyzerServiceImpl extends FlightAnalyzerServiceImplBase {
+    
     @Override
     public void analyzeFlight(FlightRequest request, StreamObserver<FlightResponse> responseObserver) {
 
-        /* Простая заглушка */
-
-        String flightNumber = request.getFlightNumber();
-        String departureDate = request.getDepartureDate();
+        // Простая заглушка
+        System.out.println("Получен запрос: " + request.getFlightNumber() + " | " + request.getDepartureDate());
 
         FlightResponse response = FlightResponse.newBuilder()
-                .setRouteSummary("Route for flight " + flightNumber + " on " + departureDate)
-                .setTurbulenceInfo("Low turbulence expected")
-                .setWeatherInfo("Sunny with a chance of coding")
-                .build();
-
+            .setRouteSummary("Маршрут пока не определён")
+            .setTurbulenceInfo("Нет данных")
+            .setWeatherInfo("Без осадков")
+            .setMessage("Запрос обработан успешно")
+            .setRecommendation("Оставайтесь на связи")
+            .build();
+     
         responseObserver.onNext(response);
-        responseObserver.onCompleted();
+        responseObserver.onCompleted();            
     }
 }

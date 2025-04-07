@@ -5,8 +5,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.59.0)",
-    comments = "Source: FlightAnalyzer.proto")
+    value = "by gRPC proto compiler (version 1.62.2)",
+    comments = "Source: analyzer.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class FlightAnalyzerServiceGrpc {
 
@@ -244,7 +244,7 @@ public final class FlightAnalyzerServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.skycalm.analyzer.grpc.FlightAnalyzerProto.getDescriptor();
+      return com.skycalm.analyzer.grpc.Analyzer.getDescriptor();
     }
 
     @java.lang.Override

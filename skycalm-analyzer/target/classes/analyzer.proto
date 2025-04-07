@@ -1,0 +1,23 @@
+syntax = "proto3"; 
+
+package flightanalyzer; // логическое имя пакета
+// Указываем пакет для Java, чтобы не путались классы
+option java_multiple_files = true;
+option java_package = "com.skycalm.analyzer.grpc";
+
+message FlightRequest { 
+    string flightNumber = 1;
+    string departureDate = 2; // формат: "2025-03-30"
+}
+
+message FlightResponse {
+    string routeSummary = 1;
+    string turbulenceInfo = 2;
+    string weatherInfo = 3;
+    string message = 4;
+    string recommendation = 5;
+}
+
+service FlightAnalyzerService {
+    rpc AnalyzeFlight(FlightRequest) returns (FlightResponse);
+  }
