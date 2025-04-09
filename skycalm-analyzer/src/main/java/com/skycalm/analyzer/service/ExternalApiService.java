@@ -10,6 +10,7 @@ public class ExternalApiService {
         // Простая заглушка
 
         Map<String, String> data = new HashMap<>();
+        
         data.put("routeSummary", "Москва -> Нью-Йорк");
         data.put("turbulenceInfo", "Средняя турбулентность");
         data.put("weatherInfo", "Переменная облачность");

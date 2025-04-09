@@ -2,9 +2,16 @@ C:\Users\79626\Desktop\skyCalm\skycalm-analyzer\src\main\java\com\skycalm\analyz
 C:\Users\79626\Desktop\skyCalm\skycalm-analyzer\src\main\java\com\skycalm\analyzer\AnalyzerServer.java
 C:\Users\79626\Desktop\skyCalm\skycalm-analyzer\src\main\java\com\skycalm\analyzer\service\ExternalApiService.java
 C:\Users\79626\Desktop\skyCalm\skycalm-analyzer\src\main\java\com\skycalm\analyzer\service\FlightAnalyzerServiceImpl.java
+C:\Users\79626\Desktop\skyCalm\skycalm-analyzer\src\main\java\com\skycalm\analyzer\service\TestServiceImpl.java
+C:\Users\79626\Desktop\skyCalm\skycalm-analyzer\src\main\java\com\skycalm\analyzer\TestServiceClient.java
 C:\Users\79626\Desktop\skyCalm\skycalm-analyzer\target\generated-sources\protobuf\grpc-java\com\skycalm\analyzer\grpc\FlightAnalyzerServiceGrpc.java
+C:\Users\79626\Desktop\skyCalm\skycalm-analyzer\target\generated-sources\protobuf\grpc-java\com\skycalm\analyzer\grpc\TestServiceGrpc.java
 C:\Users\79626\Desktop\skyCalm\skycalm-analyzer\target\generated-sources\protobuf\java\com\skycalm\analyzer\grpc\Analyzer.java
 C:\Users\79626\Desktop\skyCalm\skycalm-analyzer\target\generated-sources\protobuf\java\com\skycalm\analyzer\grpc\FlightRequest.java
 C:\Users\79626\Desktop\skyCalm\skycalm-analyzer\target\generated-sources\protobuf\java\com\skycalm\analyzer\grpc\FlightRequestOrBuilder.java
 C:\Users\79626\Desktop\skyCalm\skycalm-analyzer\target\generated-sources\protobuf\java\com\skycalm\analyzer\grpc\FlightResponse.java
 C:\Users\79626\Desktop\skyCalm\skycalm-analyzer\target\generated-sources\protobuf\java\com\skycalm\analyzer\grpc\FlightResponseOrBuilder.java
+C:\Users\79626\Desktop\skyCalm\skycalm-analyzer\target\generated-sources\protobuf\java\com\skycalm\analyzer\grpc\TestMessageRequest.java
+C:\Users\79626\Desktop\skyCalm\skycalm-analyzer\target\generated-sources\protobuf\java\com\skycalm\analyzer\grpc\TestMessageRequestOrBuilder.java
+C:\Users\79626\Desktop\skyCalm\skycalm-analyzer\target\generated-sources\protobuf\java\com\skycalm\analyzer\grpc\TestMessageResponse.java
+C:\Users\79626\Desktop\skyCalm\skycalm-analyzer\target\generated-sources\protobuf\java\com\skycalm\analyzer\grpc\TestMessageResponseOrBuilder.java

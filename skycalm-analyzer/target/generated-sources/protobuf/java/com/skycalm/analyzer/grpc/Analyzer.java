@@ -25,6 +25,16 @@ public final class Analyzer {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_flightanalyzer_FlightResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_flightanalyzer_TestMessageRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_flightanalyzer_TestMessageRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_flightanalyzer_TestMessageResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_flightanalyzer_TestMessageResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -34,20 +44,30 @@ public final class Analyzer {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016analyzer.proto\022\016flightanalyzer\"<\n\rFlig" +
-      "htRequest\022\024\n\014flightNumber\030\001 \001(\t\022\025\n\rdepar" +
-      "tureDate\030\002 \001(\t\"|\n\016FlightResponse\022\024\n\014rout" +
-      "eSummary\030\001 \001(\t\022\026\n\016turbulenceInfo\030\002 \001(\t\022\023" +
-      "\n\013weatherInfo\030\003 \001(\t\022\017\n\007message\030\004 \001(\t\022\026\n\016" +
-      "recommendation\030\005 \001(\t2g\n\025FlightAnalyzerSe" +
-      "rvice\022N\n\rAnalyzeFlight\022\035.flightanalyzer." +
-      "FlightRequest\032\036.flightanalyzer.FlightRes" +
-      "ponseB\035\n\031com.skycalm.analyzer.grpcP\001b\006pr" +
-      "oto3"
+      "\n\016analyzer.proto\022\016flightanalyzer\032\033google" +
+      "/protobuf/empty.proto\"<\n\rFlightRequest\022\024" +
+      "\n\014flightNumber\030\001 \001(\t\022\025\n\rdepartureDate\030\002 " +
+      "\001(\t\"|\n\016FlightResponse\022\024\n\014routeSummary\030\001 " +
+      "\001(\t\022\026\n\016turbulenceInfo\030\002 \001(\t\022\023\n\013weatherIn" +
+      "fo\030\003 \001(\t\022\017\n\007message\030\004 \001(\t\022\026\n\016recommendat" +
+      "ion\030\005 \001(\t\"\"\n\022TestMessageRequest\022\014\n\004text\030" +
+      "\001 \001(\t\"\'\n\023TestMessageResponse\022\020\n\010response" +
+      "\030\001 \001(\t2g\n\025FlightAnalyzerService\022N\n\rAnaly" +
+      "zeFlight\022\035.flightanalyzer.FlightRequest\032" +
+      "\036.flightanalyzer.FlightResponse2\207\002\n\013Test" +
+      "Service\022O\n\004Test\022\".flightanalyzer.TestMes" +
+      "sageRequest\032#.flightanalyzer.TestMessage" +
+      "Response\022S\n\010sendText\022\".flightanalyzer.Te" +
+      "stMessageRequest\032#.flightanalyzer.TestMe" +
+      "ssageResponse\022R\n\023pingWithNoParametrs\022\026.g" +
+      "oogle.protobuf.Empty\032#.flightanalyzer.Te" +
+      "stMessageResponseB\035\n\031com.skycalm.analyze" +
+      "r.grpcP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.EmptyProto.getDescriptor(),
         });
     internal_static_flightanalyzer_FlightRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -61,6 +81,19 @@ public final class Analyzer {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_flightanalyzer_FlightResponse_descriptor,
         new java.lang.String[] { "RouteSummary", "TurbulenceInfo", "WeatherInfo", "Message", "Recommendation", });
+    internal_static_flightanalyzer_TestMessageRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_flightanalyzer_TestMessageRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_flightanalyzer_TestMessageRequest_descriptor,
+        new java.lang.String[] { "Text", });
+    internal_static_flightanalyzer_TestMessageResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_flightanalyzer_TestMessageResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_flightanalyzer_TestMessageResponse_descriptor,
+        new java.lang.String[] { "Response", });
+    com.google.protobuf.EmptyProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

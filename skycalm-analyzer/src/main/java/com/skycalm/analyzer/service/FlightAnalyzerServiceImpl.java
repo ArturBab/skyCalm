@@ -4,11 +4,11 @@ import java.util.Map;
 
 import com.skycalm.analyzer.grpc.FlightRequest;
 import com.skycalm.analyzer.grpc.FlightResponse;
-import com.skycalm.analyzer.grpc.FlightAnalyzerServiceGrpc.FlightAnalyzerServiceImplBase;
+import com.skycalm.analyzer.grpc.FlightAnalyzerServiceGrpc;
 
 import io.grpc.stub.StreamObserver;
 
-public class FlightAnalyzerServiceImpl extends FlightAnalyzerServiceImplBase {
+public class FlightAnalyzerServiceImpl extends FlightAnalyzerServiceGrpc.FlightAnalyzerServiceImplBase {
 
     private final ExternalApiService apiService = new ExternalApiService();
 

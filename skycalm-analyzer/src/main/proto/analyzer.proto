@@ -5,6 +5,8 @@ package flightanalyzer; // логическое имя пакета
 option java_multiple_files = true;
 option java_package = "com.skycalm.analyzer.grpc";
 
+import "google/protobuf/empty.proto"; // готовый Empty
+
 message FlightRequest { 
     string flightNumber = 1;
     string departureDate = 2; // формат: "2025-03-30"
@@ -18,6 +20,20 @@ message FlightResponse {
     string recommendation = 5;
 }
 
+message TestMessageRequest {
+    string text = 1;
+}
+
+message TestMessageResponse {
+    string response = 1;
+}
+
 service FlightAnalyzerService {
     rpc AnalyzeFlight(FlightRequest) returns (FlightResponse);
-  }
+}
+
+service TestService {
+    rpc Test(TestMessageRequest) returns (TestMessageResponse);
+    rpc sendText(TestMessageRequest) returns (TestMessageResponse);
+    rpc pingWithNoParametrs(google.protobuf.Empty) returns (TestMessageResponse); 
+}
