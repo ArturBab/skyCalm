@@ -1,0 +1,6 @@
+grpc:
+  client:
+    flightAnalyzerService:
+      address: 'static://localhost:9090'
+      enableKeepAlive: true
+      negotiationType: plaintext

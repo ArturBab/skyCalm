@@ -144,6 +144,7 @@ method: AnalyzeFlight
 ```
 
 Sample request:
+
 ```json
 {
   "flightNumber": "SK123",
@@ -158,17 +159,21 @@ Sample request:
 > These are real issues encountered and fixed during SkyCalm Analyzer development.
 
 ### 1. "Unable to find a suitable main class"
- Fix: Add `<mainClass>` to `spring-boot-maven-plugin`  
+
+Fix: Add `<mainClass>` to `spring-boot-maven-plugin`  
 Avoid overriding `<sourceDirectory>`
 
 ### 2. "ClassNotFoundException: SkycalmAnalyzerApplication"
- Fix: Ensure correct `<sourceDirectory>` and recompile with `./mvnw clean compile`
+
+Fix: Ensure correct `<sourceDirectory>` and recompile with `./mvnw clean compile`
 
 ### 3. "Cannot inherit from final class FlightAnalyzerServiceGrpc"
+
 Fix: Extend `FlightAnalyzerServiceGrpc.FlightAnalyzerServiceImplBase`
 
 ### 4. "The version cannot be empty" (for spring-boot-configuration-processor)
- Fix: Replace `${spring-boot.version}` with hardcoded `3.4.4`
+
+Fix: Replace `${spring-boot.version}` with hardcoded `3.4.4`
 
 ---
 

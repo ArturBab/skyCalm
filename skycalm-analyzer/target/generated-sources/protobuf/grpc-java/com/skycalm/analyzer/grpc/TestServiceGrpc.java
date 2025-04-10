@@ -108,6 +108,37 @@ public final class TestServiceGrpc {
     return getPingWithNoParametrsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.skycalm.analyzer.grpc.Obj,
+      com.skycalm.analyzer.grpc.ObjResponse> getPostObjectMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "postObject",
+      requestType = com.skycalm.analyzer.grpc.Obj.class,
+      responseType = com.skycalm.analyzer.grpc.ObjResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.skycalm.analyzer.grpc.Obj,
+      com.skycalm.analyzer.grpc.ObjResponse> getPostObjectMethod() {
+    io.grpc.MethodDescriptor<com.skycalm.analyzer.grpc.Obj, com.skycalm.analyzer.grpc.ObjResponse> getPostObjectMethod;
+    if ((getPostObjectMethod = TestServiceGrpc.getPostObjectMethod) == null) {
+      synchronized (TestServiceGrpc.class) {
+        if ((getPostObjectMethod = TestServiceGrpc.getPostObjectMethod) == null) {
+          TestServiceGrpc.getPostObjectMethod = getPostObjectMethod =
+              io.grpc.MethodDescriptor.<com.skycalm.analyzer.grpc.Obj, com.skycalm.analyzer.grpc.ObjResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "postObject"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.skycalm.analyzer.grpc.Obj.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.skycalm.analyzer.grpc.ObjResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TestServiceMethodDescriptorSupplier("postObject"))
+              .build();
+        }
+      }
+    }
+    return getPostObjectMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -176,6 +207,13 @@ public final class TestServiceGrpc {
         io.grpc.stub.StreamObserver<com.skycalm.analyzer.grpc.TestMessageResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPingWithNoParametrsMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void postObject(com.skycalm.analyzer.grpc.Obj request,
+        io.grpc.stub.StreamObserver<com.skycalm.analyzer.grpc.ObjResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPostObjectMethod(), responseObserver);
+    }
   }
 
   /**
@@ -228,6 +266,14 @@ public final class TestServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getPingWithNoParametrsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void postObject(com.skycalm.analyzer.grpc.Obj request,
+        io.grpc.stub.StreamObserver<com.skycalm.analyzer.grpc.ObjResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getPostObjectMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -265,6 +311,13 @@ public final class TestServiceGrpc {
     public com.skycalm.analyzer.grpc.TestMessageResponse pingWithNoParametrs(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getPingWithNoParametrsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.skycalm.analyzer.grpc.ObjResponse postObject(com.skycalm.analyzer.grpc.Obj request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getPostObjectMethod(), getCallOptions(), request);
     }
   }
 
@@ -307,11 +360,20 @@ public final class TestServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getPingWithNoParametrsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.skycalm.analyzer.grpc.ObjResponse> postObject(
+        com.skycalm.analyzer.grpc.Obj request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getPostObjectMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_TEST = 0;
   private static final int METHODID_SEND_TEXT = 1;
   private static final int METHODID_PING_WITH_NO_PARAMETRS = 2;
+  private static final int METHODID_POST_OBJECT = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -341,6 +403,10 @@ public final class TestServiceGrpc {
         case METHODID_PING_WITH_NO_PARAMETRS:
           serviceImpl.pingWithNoParametrs((com.google.protobuf.Empty) request,
               (io.grpc.stub.StreamObserver<com.skycalm.analyzer.grpc.TestMessageResponse>) responseObserver);
+          break;
+        case METHODID_POST_OBJECT:
+          serviceImpl.postObject((com.skycalm.analyzer.grpc.Obj) request,
+              (io.grpc.stub.StreamObserver<com.skycalm.analyzer.grpc.ObjResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -381,6 +447,13 @@ public final class TestServiceGrpc {
               com.google.protobuf.Empty,
               com.skycalm.analyzer.grpc.TestMessageResponse>(
                 service, METHODID_PING_WITH_NO_PARAMETRS)))
+        .addMethod(
+          getPostObjectMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.skycalm.analyzer.grpc.Obj,
+              com.skycalm.analyzer.grpc.ObjResponse>(
+                service, METHODID_POST_OBJECT)))
         .build();
   }
 
@@ -432,6 +505,7 @@ public final class TestServiceGrpc {
               .addMethod(getTestMethod())
               .addMethod(getSendTextMethod())
               .addMethod(getPingWithNoParametrsMethod())
+              .addMethod(getPostObjectMethod())
               .build();
         }
       }

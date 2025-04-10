@@ -35,6 +35,16 @@ public final class Analyzer {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_flightanalyzer_TestMessageResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_flightanalyzer_Obj_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_flightanalyzer_Obj_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_flightanalyzer_ObjResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_flightanalyzer_ObjResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -52,17 +62,23 @@ public final class Analyzer {
       "fo\030\003 \001(\t\022\017\n\007message\030\004 \001(\t\022\026\n\016recommendat" +
       "ion\030\005 \001(\t\"\"\n\022TestMessageRequest\022\014\n\004text\030" +
       "\001 \001(\t\"\'\n\023TestMessageResponse\022\020\n\010response" +
-      "\030\001 \001(\t2g\n\025FlightAnalyzerService\022N\n\rAnaly" +
-      "zeFlight\022\035.flightanalyzer.FlightRequest\032" +
-      "\036.flightanalyzer.FlightResponse2\207\002\n\013Test" +
-      "Service\022O\n\004Test\022\".flightanalyzer.TestMes" +
-      "sageRequest\032#.flightanalyzer.TestMessage" +
-      "Response\022S\n\010sendText\022\".flightanalyzer.Te" +
+      "\030\001 \001(\t\"<\n\003Obj\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022" +
+      "\013\n\003age\030\003 \001(\005\022\016\n\006status\030\004 \001(\010\"e\n\013ObjRespo" +
+      "nse\0224\n\007message\030\001 \001(\0132#.flightanalyzer.Te" +
+      "stMessageResponse\022 \n\003obj\030\002 \001(\0132\023.flighta" +
+      "nalyzer.Obj2g\n\025FlightAnalyzerService\022N\n\r" +
+      "AnalyzeFlight\022\035.flightanalyzer.FlightReq" +
+      "uest\032\036.flightanalyzer.FlightResponse2\307\002\n" +
+      "\013TestService\022O\n\004Test\022\".flightanalyzer.Te" +
       "stMessageRequest\032#.flightanalyzer.TestMe" +
-      "ssageResponse\022R\n\023pingWithNoParametrs\022\026.g" +
-      "oogle.protobuf.Empty\032#.flightanalyzer.Te" +
-      "stMessageResponseB\035\n\031com.skycalm.analyze" +
-      "r.grpcP\001b\006proto3"
+      "ssageResponse\022S\n\010sendText\022\".flightanalyz" +
+      "er.TestMessageRequest\032#.flightanalyzer.T" +
+      "estMessageResponse\022R\n\023pingWithNoParametr" +
+      "s\022\026.google.protobuf.Empty\032#.flightanalyz" +
+      "er.TestMessageResponse\022>\n\npostObject\022\023.f" +
+      "lightanalyzer.Obj\032\033.flightanalyzer.ObjRe" +
+      "sponseB\035\n\031com.skycalm.analyzer.grpcP\001b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -93,6 +109,18 @@ public final class Analyzer {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_flightanalyzer_TestMessageResponse_descriptor,
         new java.lang.String[] { "Response", });
+    internal_static_flightanalyzer_Obj_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_flightanalyzer_Obj_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_flightanalyzer_Obj_descriptor,
+        new java.lang.String[] { "Id", "Name", "Age", "Status", });
+    internal_static_flightanalyzer_ObjResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_flightanalyzer_ObjResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_flightanalyzer_ObjResponse_descriptor,
+        new java.lang.String[] { "Message", "Obj", });
     com.google.protobuf.EmptyProto.getDescriptor();
   }
 

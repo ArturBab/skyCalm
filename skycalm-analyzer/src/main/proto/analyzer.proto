@@ -32,8 +32,21 @@ service FlightAnalyzerService {
     rpc AnalyzeFlight(FlightRequest) returns (FlightResponse);
 }
 
+message Obj {
+    int32 id = 1;
+    string name = 2;
+    int32 age = 3;
+    bool status = 4;
+}
+
+message ObjResponse {
+    TestMessageResponse message = 1;
+    Obj obj = 2;
+}
+
 service TestService {
     rpc Test(TestMessageRequest) returns (TestMessageResponse);
     rpc sendText(TestMessageRequest) returns (TestMessageResponse);
-    rpc pingWithNoParametrs(google.protobuf.Empty) returns (TestMessageResponse); 
+    rpc pingWithNoParametrs(google.protobuf.Empty) returns (TestMessageResponse);
+    rpc postObject(Obj) returns (ObjResponse); 
 }

@@ -1,0 +1,14 @@
+{
+  "java.configuration.updateBuildConfiguration": "disabled",
+  "java.project.sourcePaths": [
+    "src/main/java",
+    "target/generated-sources/protobuf/java",
+    "target/generated-sources/protobuf/grpc-java"
+  ],
+  "java.compile.nullAnalysis.mode": "disabled",
+  "java.autobuild.enabled": false,
+  "maven.executable.path": "mvnw.cmd", // чтобы не использовал глобальный Maven
+  "files.autoSave": "off",
+  "files.autoSaveDelay": 10000,
+  "java.debug.settings.onBuildFailureProceed": true
+}

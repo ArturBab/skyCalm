@@ -1,0 +1,4 @@
+com\skycalm\gateway\controllers\FlightGatewayController.class
+com\skycalm\gateway\controllers\FlightController.class
+com\skycalm\gateway\SkycalmGatewayApplication.class
+com\skycalm\gateway\controllers\TestController.class

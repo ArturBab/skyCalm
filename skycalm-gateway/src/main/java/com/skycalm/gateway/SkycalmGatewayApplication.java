@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SkycalmGatewayApplication {
 
 	public static void main(String[] args) {
+		System.out.println(">>> SkyCalm Gateway is starting...");
 		SpringApplication.run(SkycalmGatewayApplication.class, args);
 	}
 
