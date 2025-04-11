@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package flightanalyzer.protocol;
+
+option java_package = "com.skycalm.analyzer.analyzergrpc";
+option java_multiple_files = true;
+
+
+// Requests
+message RequestAirlineTicket {
+    string departureDate = 1; // "2025-04-11"
+    string departureTime = 2; // "15:30"
+    string from = 3;
+    string to = 4;
+    string airline = 5;
+}
+
+// Responses
+message FlightInfoResponse {
+    string status = 1; // "on-time", "delayed", "cancelled"
+    string duration = 2;
+}
+
+message WeatherInfoResponse {
+    string condition = 1; // "Clear", "Cloudy", "Storm"
+    float temperature = 2;
+    float windSpeed = 3;
+}
+
+message AnalyzeFlightResponse {
+    string summary = 1;
+    string advice = 2;
+    string createdAt = 3;
+    WeatherInfoResponse weather = 4;
+    FlightInfoResponse flight = 5;
+}
+
+// Service
+service AnalyzerService {
+    rpc AnalyzeFlight (RequestAirlineTicket) returns (AnalyzeFlightResponse); // analyze ticket
+    /**
+    rpc GetWeatherForTicket() returns ();
+    rpc GetFlightStatus() returns ();
+    rpc GetFlightCommentaryById() returns ();
+    rpc SaveRawFlightLog() returns ();
+    */
+}
