@@ -12,21 +12,18 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "weather_info")
-public class WeatherInfo {
+@Table(name = "flight_info")
+public class FlightInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "condition")
-    private String condition;
+    @Column(name = "status")
+    private String status;
 
-    @Column(name = "temperature")
-    private float temperature;
-
-    @Column(name = "windSpeed")
-    private float windSpeed;
+    @Column(name = "duration")
+    private String duration;
 
     @Column(name = "createdAt")
     private LocalDateTime createdAt;
@@ -36,13 +33,12 @@ public class WeatherInfo {
     @JoinColumn(name = "flight_commentary_id", nullable = false)
     private FlightCommentary flightCommentary;
 
-    public WeatherInfo() {
+    public FlightInfo() {
     }
 
-    public WeatherInfo(String condition, float temperature, float windSpeed, LocalDateTime createdAt) {
-        this.condition = condition;
-        this.temperature = temperature;
-        this.windSpeed = windSpeed;
+    public FlightInfo(String status, String duration, LocalDateTime createdAt) {
+        this.status = status;
+        this.duration = duration;
         this.createdAt = createdAt;
     }
 
@@ -54,28 +50,20 @@ public class WeatherInfo {
         this.id = id;
     }
 
-    public String getCondition() {
-        return condition;
+    public String getStatus() {
+        return status;
     }
 
-    public void setCondition(String condition) {
-        this.condition = condition;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public float getTemperature() {
-        return temperature;
+    public String getDuration() {
+        return duration;
     }
 
-    public void setTemperature(float temperature) {
-        this.temperature = temperature;
-    }
-
-    public float getWindSpeed() {
-        return windSpeed;
-    }
-
-    public void setWindSpeed(float windSpeed) {
-        this.windSpeed = windSpeed;
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
 
     public LocalDateTime getCreatedAt() {
