@@ -24,10 +24,10 @@ public class AirlineTicket {
     @Column(name = "departure_time")
     private LocalTime departureTime;
 
-    @Column(name = "from")
+    @Column(name = "\"from\"")
     private String from;
 
-    @Column(name = "to")
+    @Column(name = "\"to\"")
     private String to;
 
     @Column(name = "airline")

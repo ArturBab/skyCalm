@@ -82,4 +82,8 @@ public class FlightCommentary {
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
+
+    public void setAirlineTicket(AirlineTicket airlineTicket) {
+        this.airlineTicket = airlineTicket;
+    }    
 }
